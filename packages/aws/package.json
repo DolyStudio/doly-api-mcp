@@ -1,0 +1,26 @@
+{
+  "name": "@repo/aws",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "exports": {
+    "./bedrock": "./src/bedrock.ts"
+  },
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "rollup -c",
+    "lint": "eslint . --max-warnings 0",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@repo/shared": "workspace:*",
+    "@aws-sdk/client-bedrock-runtime": "^3.540.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "eslint": "^9.31.0",
+    "rollup": "^4.45.1",
+    "rollup-plugin-dts": "^6.2.1",
+    "typescript": "^5.8.3"
+  }
+}
