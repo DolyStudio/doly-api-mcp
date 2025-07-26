@@ -1,0 +1,30 @@
+{
+  "name": "@repo/shared",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "exports": {
+    "./utils": "./src/utils.ts",
+    "./types": "./src/types.ts",
+    "./base.json": "./tsconfig.json",
+    "./rollup.config.js": "./rollup.config.js"
+  },
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npm run clean && rollup -c",
+    "lint": "eslint . --max-warnings 0",
+    "check-types": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^12.1.4",
+    "@types/express": "^5.0.3",
+    "@types/node": "^22.15.3",
+    "eslint": "^9.31.0",
+    "rollup": "^4.45.1",
+    "rollup-plugin-dts": "^6.2.1",
+    "typescript": "5.8.2"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
