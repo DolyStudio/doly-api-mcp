@@ -13,10 +13,12 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
+    "@aws-sdk/client-bedrock-runtime": "^3.540.0",
     "@repo/shared": "workspace:*",
-    "@aws-sdk/client-bedrock-runtime": "^3.540.0"
+    "dotenv": "^17.2.1"
   },
   "devDependencies": {
+    "@rollup/plugin-typescript": "^12.1.4",
     "@types/node": "^22.15.3",
     "eslint": "^9.31.0",
     "rollup": "^4.45.1",

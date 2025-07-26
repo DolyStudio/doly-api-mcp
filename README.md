@@ -1,7 +1,13 @@
+# mcp-monorepo
+
+## preInstall files
+
+```typescript
+// rollup.config.js
 import typescript from "@rollup/plugin-typescript";
 
 export default {
-  input: ["src/bedrock.ts", "src/sts.ts"],
+  input: ["src/types.ts", "src/utils.ts"],
   output: {
     dir: "dist",
     format: "es",
@@ -13,3 +19,4 @@ export default {
   ],
   exclude: ["node_modules", "__test__", "package*.json"],
 };
+```
